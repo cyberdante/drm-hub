@@ -1,0 +1,24 @@
+syntax = "proto2";
+package Cenc;
+
+message WidevineCencHeader {
+	enum Algorithm {
+		UNENCRYPTED = 0;
+		AESCTR = 1;
+	};
+
+	required Algorithm algorithm = 1 [default = AESCTR];
+
+	repeated bytes key_id = 2;
+
+	required string provider = 3 [default = "widevine_test"]; // Content provider's name.
+
+	required bytes content_id = 4; // A content identifier, specified by content provider.
+
+	required string track_type = 5 [default = "SD"]; // Track type. Acceptable values are SD, HD and AUDIO. Used to differentiate content keys used by an asset.
+	
+	optional string policy = 6; // The name of a registered policy to be used for this asset.
+
+	optional uint32 crypto_period_index = 7; // Crypto period index, for media using key rotation.
+	
+}
