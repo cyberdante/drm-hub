@@ -1,0 +1,15 @@
+{
+	"payload": "<payload_placeholder>",
+	"content_id": "<contentid_placeholder>",
+	"provider": "<provider_placeholder>",
+	"allowed_track_types": "<allowed_tracks_placeholder>",
+	"content_key_specs": [{
+		"key_id": "<keyid_placeholder>",
+		"key": "<cek_placeholder>"
+	}],
+	"use_policy_overrides_exclusively": true,
+	"policy_overrides": {
+		"license_duration_seconds": 36000,
+		"can_play": true
+	}
+}
